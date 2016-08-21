@@ -1,0 +1,24 @@
+{
+  "name": "open-source-contribution-automator",
+  "version": "1.0.0",
+  "description": "This is a tool to automate \"open-source\" contribution and pad your Github profile.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaachinman/open-source-contribution-automator.git"
+  },
+  "author": "Isaac Hinman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isaachinman/open-source-contribution-automator/issues"
+  },
+  "homepage": "https://github.com/isaachinman/open-source-contribution-automator#readme",
+  "dependencies": {
+    "node-schedule": "^1.1.1",
+    "simple-git": "^1.47.0",
+    "write": "^0.3.2"
+  }
+}
