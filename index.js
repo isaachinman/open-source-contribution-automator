@@ -16,12 +16,8 @@ for (var i = 0; i < numOfCommits; i++) {
   writeFile.sync(('contributions/' + today + '/' + (i + 1)), '')
 
   // Perform a meaningless commit
-  var commitSpawn = require('child_process').spawn
-  var commit = commitSpawn('git', ['commit',('-am "Contribution" ' + today + ' #' + (i + 1))])
-  commit.on('exit', function (code) {
-    var pushSpawn = require('child_process').spawn
-    var push = pushSpawn('git', ['push','origin','master'])
-  })
+  var add = require('child_process').execSync('git add contributions/' + today + '/' + (i + 1))
+  var commit = require('child_process').execSync('git commit -m "Contribution, ' + today + ' #' + (i + 1) + '"')
 
 }
 
