@@ -3,9 +3,6 @@ var schedule = require('node-schedule')
 var moment = require('moment')
 var writeFile = require('write')
 
-// Pull before doing anything else
-git('.').pull()
-
 // Pick a random number between 1 and 20
 var numOfCommits = Math.ceil(Math.random() * (0 - 20) + 20)
 
