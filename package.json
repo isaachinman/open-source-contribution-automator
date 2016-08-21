@@ -19,7 +19,6 @@
   "dependencies": {
     "moment": "^2.14.1",
     "node-schedule": "^1.1.1",
-    "simple-git": "^1.47.0",
     "write": "^0.3.2"
   }
 }

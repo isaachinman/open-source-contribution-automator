@@ -1,6 +1,5 @@
 // Dependencies
 var schedule = require('node-schedule')
-var git = require('simple-git')
 var moment = require('moment')
 var writeFile = require('write')
 
@@ -20,9 +19,14 @@ for (var i = 0; i < numOfCommits; i++) {
   writeFile.sync(('contributions/' + today + '/' + (i + 1)), '')
 
   // Perform a meaningless commit
-  git()
-    .commit(today + '-' + i)
-    .push('origin', 'master')
+  var commitSpawn = require('child_process').spawn
+  var commit = commitSpawn('git', ['commit',('-am "Contribution"' + today + '-' + (i + 1))])
+  commit.on('exit', function (code) {
+    if (code == 0 ) {
+      var pushSpawn = require('child_process').spawn,
+      var push = pushSpawn('git', ['push','origin','master'])
+    }
+  })
 
 }
 
