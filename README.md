@@ -2,6 +2,8 @@
 
 This is a tool to automate "open-source" contribution and pad your Github profile.
 
+![alt text](https://i.imgur.com/piFIRf8.png "This is incredibly superficial and stupid")
+
 ## What does this thing do?
 
 This tiny little project was built for fun. Please don't take it seriously.
