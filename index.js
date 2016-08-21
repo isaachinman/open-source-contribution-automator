@@ -20,5 +20,6 @@ for (var i = 0; i < numOfCommits; i++) {
   // Perform a meaningless commit
   require('child_process').execSync('git add contributions/' + today + '/' + (i + 1))
   require('child_process').execSync('git commit -m "Contribution: ' + today + ' #' + (i + 1) + '"')
+  require('child_process').execSync('git push')
 
 }
