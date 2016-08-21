@@ -17,12 +17,10 @@ for (var i = 0; i < numOfCommits; i++) {
 
   // Perform a meaningless commit
   var commitSpawn = require('child_process').spawn
-  var commit = commitSpawn('git', ['commit',('-am "Contribution"' + today + '-' + (i + 1))])
+  var commit = commitSpawn('git', ['commit',('-am Contribution ' + today + ' #' + (i + 1))])
   commit.on('exit', function (code) {
-    if (code == 0 ) {
-      var pushSpawn = require('child_process').spawn
-      var push = pushSpawn('git', ['push','origin','master'])
-    }
+    var pushSpawn = require('child_process').spawn
+    var push = pushSpawn('git', ['push','origin','master'])
   })
 
 }
