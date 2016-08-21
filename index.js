@@ -1,5 +1,4 @@
 // Dependencies
-var schedule = require('node-schedule')
 var moment = require('moment')
 var writeFile = require('write')
 
